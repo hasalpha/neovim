@@ -26,10 +26,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set({ "n", "x" }, "<leader>f", ":LspZeroFormat<CR>")
 vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
-vim.keymap.set("n", "<leader>j", "gt")
-vim.keymap.set("n", "<leader>k", "gT")
 vim.keymap.set("n", "<leader>cn", ":cn<CR>")
 vim.keymap.set("n", "<leader>cp", ":cp<CR>")
+vim.keymap.set("n", "<leader>d",vim.lsp.buf.signature_help);
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2

@@ -47,7 +47,9 @@ return require('packer').startup(function(use)
 			{ 'saadparwaiz1/cmp_luasnip' },
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'hrsh7th/cmp-nvim-lua' },
-
+			{
+				'hrsh7th/cmp-cmdline'
+			},
 			-- Snippets
 			{ 'L3MON4D3/LuaSnip' },
 			{ 'rafamadriz/friendly-snippets' },
@@ -77,10 +79,26 @@ return require('packer').startup(function(use)
 	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 	use 'tpope/vim-surround'
 	use {
-	    'numToStr/Comment.nvim',
-	    config = function()
-		        require('Comment').setup()
-		    end
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
 	}
 	use { "ellisonleao/gruvbox.nvim" }
+	use 'NvChad/nvim-colorizer.lua'
+	use 'RRethy/vim-illuminate'
+	use({
+  "utilyre/barbecue.nvim",
+  requires = {
+    "neovim/nvim-lspconfig",
+    "SmiteshP/nvim-navic",
+    "nvim-tree/nvim-web-devicons", -- optional dependency
+  },
+  after = "nvim-web-devicons", -- keep this if you're using NvChad
+  config = function()
+    require("barbecue").setup()
+  end,
+})
+	use 'yonlu/omni.vim'
+	use 'olimorris/onedarkpro.nvim'
 end)
