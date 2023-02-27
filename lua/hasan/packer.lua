@@ -21,16 +21,16 @@ return require('packer').startup(function(use)
 	}
 
 	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
+		'windwp/nvim-autopairs',
+		config = function() require('nvim-autopairs').setup {} end
 	}
 
 	use {
-		"windwp/nvim-ts-autotag",
-		config = function() require("nvim-ts-autotag").setup() end
+		'windwp/nvim-ts-autotag',
+		config = function() require('nvim-ts-autotag').setup() end
 	}
 
-	use "tpope/vim-fugitive"
+	use 'tpope/vim-fugitive'
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
 	}
 
 	use { 'nvim-treesitter/nvim-treesitter-context',
-		config = function() require("treesitter-context").setup() end
+		config = function() require('treesitter-context').setup() end
 	}
 
 	use {
@@ -64,10 +64,10 @@ return require('packer').startup(function(use)
 	}
 	use 'nvim-tree/nvim-web-devicons'
 	use {
-		"folke/trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
+		'folke/trouble.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
 		config = function()
-			require("trouble").setup {}
+			require('trouble').setup {}
 		end
 	}
 	use 'folke/lsp-colors.nvim'
@@ -82,5 +82,9 @@ return require('packer').startup(function(use)
 		        require('Comment').setup()
 		    end
 	}
-	use { "ellisonleao/gruvbox.nvim" }
+	use { 'ellisonleao/gruvbox.nvim' }
+	use 'RRethy/vim-illuminate'
+	use {
+  'ray-x/lsp_signature.nvim',
+	}
 end)
