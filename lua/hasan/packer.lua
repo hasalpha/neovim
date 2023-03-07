@@ -77,17 +77,20 @@ return require('packer').startup(function(use)
 	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 	use 'tpope/vim-surround'
 	use {
-	    'numToStr/Comment.nvim',
-	    config = function()
-		        require('Comment').setup()
-		    end
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
 	}
 	use { 'ellisonleao/gruvbox.nvim' }
 	use 'RRethy/vim-illuminate'
 	use {
-  'ray-x/lsp_signature.nvim',
+		'ray-x/lsp_signature.nvim',
 		config = function() 
-			require "lsp_signature".setup()
+			require "lsp_signature".setup({})
 		end
 	}
+
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+	use "fladson/vim-kitty"
 end)
