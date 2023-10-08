@@ -87,18 +87,6 @@ return require('packer').startup(function(use)
 	use { "ellisonleao/gruvbox.nvim" }
 	use 'NvChad/nvim-colorizer.lua'
 	use 'RRethy/vim-illuminate'
-	use({
-		"utilyre/barbecue.nvim",
-		requires = {
-			"neovim/nvim-lspconfig",
-			"SmiteshP/nvim-navic",
-			"nvim-tree/nvim-web-devicons", -- optional dependency
-		},
-		after = "nvim-web-devicons", -- keep this if you're using NvChad
-		config = function()
-			require("barbecue").setup()
-		end,
-	})
 	use 'yonlu/omni.vim'
 	use 'olimorris/onedarkpro.nvim'
 	use {'stevearc/dressing.nvim'}
