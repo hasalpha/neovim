@@ -35,3 +35,6 @@ cmp.setup({
 	}),
 	completion = { completeopt = 'menu,menuone,noinsert' },
 })
+
+vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)

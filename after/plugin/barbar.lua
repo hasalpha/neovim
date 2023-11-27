@@ -4,8 +4,8 @@ local opts = { noremap = true, silent = true }
 map('n', '<', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '>', '<Cmd>BufferNext<CR>', opts)
 
-map('n', '<leader><', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<leader>>', '<Cmd>BufferMoveNext<CR>', opts)
+map('n', '<C-p>', '<Cmd>BufferMovePrevious<CR>', opts)
+map('n', '<C-n>', '<Cmd>BufferMoveNext<CR>', opts)
 -- Goto buffer in position...
 map('n', '¡', '<Cmd>BufferGoto 1<CR>', opts)
 map('n', '™', '<Cmd>BufferGoto 2<CR>', opts)
@@ -19,7 +19,7 @@ map('n', 'ª', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', 'º', '<Cmd>BufferLast<CR>', opts)
 
 -- Pin/unpin buffer
--- 
+--
 map('n', '<leader>p', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<leader>x', '<Cmd>BufferClose<CR>', opts)

@@ -103,4 +103,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'kevinhwang91/nvim-bqf'
+	use {
+		"ray-x/lsp_signature.nvim",
+	}
 end)
