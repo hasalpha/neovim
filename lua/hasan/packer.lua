@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 
@@ -76,7 +75,7 @@ return require('packer').startup(function(use)
 	use 'tjdevries/colorbuddy.nvim'
 	use 'f-person/git-blame.nvim'
 	use 'lukas-reineke/indent-blankline.nvim'
-	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+	use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
 	use 'tpope/vim-surround'
 	use {
 		'numToStr/Comment.nvim',
@@ -89,15 +88,15 @@ return require('packer').startup(function(use)
 	use 'RRethy/vim-illuminate'
 	use 'yonlu/omni.vim'
 	use 'olimorris/onedarkpro.nvim'
-	use {'stevearc/dressing.nvim'}
+	use { 'stevearc/dressing.nvim' }
 
 	use {
 		'sudormrfbin/cheatsheet.nvim',
 
 		requires = {
-			{'nvim-telescope/telescope.nvim'},
-			{'nvim-lua/popup.nvim'},
-			{'nvim-lua/plenary.nvim'},
+			{ 'nvim-telescope/telescope.nvim' },
+			{ 'nvim-lua/popup.nvim' },
+			{ 'nvim-lua/plenary.nvim' },
 		}
 
 	}
@@ -105,5 +104,27 @@ return require('packer').startup(function(use)
 	use 'kevinhwang91/nvim-bqf'
 	use {
 		"ray-x/lsp_signature.nvim",
+	}
+	use {
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+		config = function()
+			require("copilot").setup({
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					debounce = 75,
+					keymap = {
+						accept = "<M-CR>",
+						accept_word = false,
+						accept_line = false,
+						next = "<M-]>",
+						prev = "<M-[>",
+						dismiss = "<C-]>",
+					},
+				}
+			})
+		end,
 	}
 end)
