@@ -30,14 +30,6 @@ vim.keymap.set("n", "<leader>cn", ":cn<CR>")
 vim.keymap.set("n", "<leader>cp", ":cp<CR>")
 vim.keymap.set("n", "<leader>d",vim.lsp.buf.signature_help);
 
--- Suggest keymap to enable Copilot
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>")
-
--- Keymap to enable Copilot Suggestion
-vim.keymap.set("n", "<leader>cs", ":Copilot suggestion<CR>")
--- Keymap to open Copilot Panel
-vim.keymap.set("n", "<leader>cp", ":Copilot open<CR>")
-
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
