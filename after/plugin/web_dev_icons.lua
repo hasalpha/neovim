@@ -8,6 +8,10 @@ require 'nvim-web-devicons'.setup {
 			color = "#428850",
 			cterm_color = "65",
 			name = "Zsh"
+		}, astro = {
+			icon = "",
+			color = "#EF8547",
+			name = "astro"
 		}
 	};
 	-- globally enable different highlight colors per icon (default to true)
