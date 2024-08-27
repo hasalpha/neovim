@@ -37,7 +37,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 46
 vim.opt.signcolumn = 'yes'
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "JK", "<Esc>")
 vim.keymap.set("n", "<leader>w", ":update<CR>")

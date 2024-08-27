@@ -8,7 +8,7 @@ return {
 
 	{
 		'nvim-treesitter/nvim-treesitter',
-		run = function()
+		build = function()
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
 		end,
@@ -44,8 +44,8 @@ return {
 				'hrsh7th/cmp-cmdline'
 			},
 			-- Snippets
-			{ 'L3MON4D3/LuaSnip' },
 			{ 'rafamadriz/friendly-snippets' },
+			{ 'L3MON4D3/LuaSnip',  },
 		}
 	},
 
@@ -84,17 +84,6 @@ return {
 	'yonlu/omni.vim',
 	'olimorris/onedarkpro.nvim',
 	{ 'stevearc/dressing.nvim' },
-
-	{
-		'sudormrfbin/cheatsheet.nvim',
-
-		dependencies = {
-			{ 'nvim-telescope/telescope.nvim' },
-			{ 'nvim-lua/popup.nvim' },
-			{ 'nvim-lua/plenary.nvim' },
-		}
-
-	},
 
 	'kevinhwang91/nvim-bqf',
 	{
