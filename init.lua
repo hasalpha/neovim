@@ -1,1 +1,1 @@
-require("hasan")
+require("hasan.lazy")
