@@ -17,7 +17,7 @@ return {
 		"windwp/nvim-ts-autotag",
 		config = function() require("nvim-ts-autotag").setup() end
 	},
-	"tpope/vim-fugitive",	
+	"tpope/vim-fugitive",
 	{
 		'nvim-treesitter/nvim-treesitter-context',
 		config = function() require("treesitter-context").setup() end

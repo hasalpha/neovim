@@ -89,9 +89,6 @@ return {
 				},
 			})
 
-			vim.diagnostic.config({
-				signs = false,
-			})
 		end,
 	},
 }
