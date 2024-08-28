@@ -1,12 +1,6 @@
 return {
 	checker = { enabled = true },
 	{
-		'nvim-telescope/telescope.nvim',
-		tag = '0.1.0',
-		dependencies = { { 'nvim-lua/plenary.nvim' } }
-	},
-
-	{
 		'nvim-treesitter/nvim-treesitter',
 		build = function()
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -23,32 +17,7 @@ return {
 		"windwp/nvim-ts-autotag",
 		config = function() require("nvim-ts-autotag").setup() end
 	},
-
-	"tpope/vim-fugitive",
-	{
-		'VonHeikemen/lsp-zero.nvim',
-		dependencies = {
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },
-			{ 'williamboman/mason.nvim' },
-			{ 'williamboman/mason-lspconfig.nvim' },
-
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },
-			{ 'hrsh7th/cmp-buffer' },
-			{ 'hrsh7th/cmp-path' },
-			{ 'saadparwaiz1/cmp_luasnip' },
-			{ 'hrsh7th/cmp-nvim-lsp' },
-			{ 'hrsh7th/cmp-nvim-lua' },
-			{
-				'hrsh7th/cmp-cmdline'
-			},
-			-- Snippets
-			{ 'rafamadriz/friendly-snippets' },
-			{ 'L3MON4D3/LuaSnip',  },
-		}
-	},
-
+	"tpope/vim-fugitive",	
 	{
 		'nvim-treesitter/nvim-treesitter-context',
 		config = function() require("treesitter-context").setup() end

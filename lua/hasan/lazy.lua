@@ -1,5 +1,5 @@
 -- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath= vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
@@ -59,7 +59,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set({ "n", "x" }, "<leader>f", ":LspZeroFormat<CR>")
 vim.keymap.set("n", "<leader>tt", ":TroubleToggle<CR>")
 vim.keymap.set("n", "<leader>cn", ":cn<CR>")
 vim.keymap.set("n", "<leader>cp", ":cp<CR>")
