@@ -1,7 +1,7 @@
 function ColorMyPencils()
 	-- Lua
-	vim.cmd([[colorscheme gruvbox]])
-	vim.o.background = "light" -- or "light" for light mode
+	vim.cmd.colorscheme "catppuccin"
+	vim.o.background = "light" 
 end
 
 ColorMyPencils()
