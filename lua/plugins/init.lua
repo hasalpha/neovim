@@ -23,8 +23,8 @@ return {
 	},
 	"tpope/vim-fugitive",
 	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 	"nvim-tree/nvim-web-devicons",
 	{
@@ -38,7 +38,7 @@ return {
 	"tjdevries/colorbuddy.nvim",
 	"f-person/git-blame.nvim",
 	"lukas-reineke/indent-blankline.nvim",
-	{ "romgrk/barbar.nvim", wants = "nvim-web-devicons" },
+	{ "romgrk/barbar.nvim",      wants = "nvim-web-devicons" },
 	"tpope/vim-surround",
 	{
 		"numToStr/Comment.nvim",
